@@ -35,6 +35,23 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // I can find on these e-shops
 // 2. Log the variable
 
+var cheapest_tshirt = { price: marketplace[0].price };
+
+marketplace.map((product) => {
+  MY_FAVORITE_BRANDS.map((brand) => {
+    if (
+      brand.name.toLowerCase() === product.brand.toLowerCase() &&
+      product.name.includes("t-shirt")
+    ) {
+      if (product.price < cheapest_tshirt.price) {
+        cheapest_tshirt = product;
+      }
+    }
+  });
+});
+
+console.log("Link for cheapest T-shirt: ", cheapest_tshirt.link);
+
 /**
  * 👕
  * Easy 😁?
@@ -48,28 +65,68 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 1. Create a variable and assign it the number of products
 // 2. Log the variable
 
+const num_of_products = marketplace.length
+
+console.log("Number of products: ", num_of_products)
+
 // 🎯 TODO 3: Brands name
 // 1. Create a variable and assign it the list of brands name only
 // 2. Log the variable
 // 3. Log how many brands we have
+
+var brands = []
+
+marketplace.map((product) => {
+  if (!brands.includes(product.brand)) {
+    brands.push(product.brand)
+  }
+})
+
+console.log("Brand names: ", brands)
+console.log("Number of brands: ", brands.length)
 
 // 🎯 TODO 4: Sort by price
 // 1. Create a function to sort the marketplace products by price
 // 2. Create a variable and assign it the list of products by price from lowest to highest
 // 3. Log the variable
 
+function sort_by_price(market) {
+  return [...market].sort((A_prod, B_prod) => (A_prod.price - B_prod.price));
+}
+
+const price_sorted_market = sort_by_price(marketplace)
+console.log("Price sorted marketplace: ", price_sorted_market)
+
 // 🎯 TODO 5: Sort by date
 // 1. Create a function to sort the marketplace objects by products date
 // 2. Create a variable and assign it the list of products by date from recent to old
 // 3. Log the variable
 
+function sort_by_date(market) {
+  return [...market].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)));
+}
+
+const date_sorted_market = sort_by_date(marketplace)
+console.log("Date sorted marketplace: ", date_sorted_market)
+
 // 🎯 TODO 6: Filter a specific price range
 // 1. Filter the list of products between 50€ and 100€
 // 2. Log the list
 
+const filtered_market = marketplace.filter(product => {
+  return product.price >= 50 && product.price <= 100;
+});
+
+console.log("Products between 50€ and 100€: ", filtered_market)
+
 // 🎯 TODO 7: Average price
 // 1. Determine the average price of the marketplace
 // 2. Log the average
+
+const sum = marketplace.reduce((acc, { price }) => acc + price, 0);
+const avg = sum / marketplace.length;
+
+console.log("Average price of the marketplace: ", avg, "€")
 
 /**
  * 🏎
