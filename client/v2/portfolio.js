@@ -20,21 +20,28 @@ Search for available brands list
 // current products on the page
 let currentProducts = [];
 let currentPagination = {};
+let currentBrand = "";
+
+let temp_prod = [];
+
+let brandfilter = false;
 
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
 const selectPage = document.querySelector('#page-select');
 const sectionProducts = document.querySelector('#products');
 const spanNbProducts = document.querySelector('#nbProducts');
+const spanBrands = document.querySelector('#brand-select')
 
 /**
  * Set global value
  * @param {Array} result - products to display
  * @param {Object} meta - pagination meta info
  */
-const setCurrentProducts = ({result, meta}) => {
+const setCurrentProducts = ({result, meta}, brand) => {
   currentProducts = result;
   currentPagination = meta;
+  currentBrand = brand;
 };
 
 /**
@@ -61,6 +68,24 @@ const fetchProducts = async (page = 1, size = 12) => {
     return {currentProducts, currentPagination};
   }
 };
+
+const fetchBrands = async (brand) => {
+  try {
+    const response = await fetch(
+      `https://clear-fashion-api.vercel.app/brands`
+    );
+    const body = await response.json();
+
+    if (body.success !== true) {
+      return spanBrands;
+    }
+    return body.data;
+  } catch (error) {
+    console.error(error);
+    return spanBrands;
+  }
+};
+
 
 /**
  * Render list of products
@@ -112,10 +137,31 @@ const renderIndicators = pagination => {
   spanNbProducts.innerHTML = count;
 };
 
+
+const renderBrands = async () => {
+  const brands = await fetchBrands();
+  setBrands(brands.result);
+}
+
+function setBrands(brands) {
+  var options = ["<option value=\"\">Choose brand</option>"];
+  for (let i = 0; i < brands.length; i++) { 
+    const option = ["<option value=\"", brands[i], "\">", brands[i], "</option>"].join('');
+    options.push(option);
+  }
+  spanBrands.innerHTML = options.join('');
+
+  var optionToSelect = spanBrands.querySelector("option[value='" + currentBrand + "']");
+  if (optionToSelect) {
+    optionToSelect.selected = true;
+  }
+}
+
 const render = (products, pagination) => {
   renderProducts(products);
   renderPagination(pagination);
   renderIndicators(pagination);
+  renderBrands();
 };
 
 /**
@@ -126,15 +172,77 @@ const render = (products, pagination) => {
  * Select the number of products to display
  */
 selectShow.addEventListener('change', async (event) => {
-  const products = await fetchProducts(currentPagination.currentPage, parseInt(event.target.value));
+  let products = { 
+    "meta" : {},
+    "result" : []
+  };
+  if(brandfilter) {
+    products.meta.count =  temp_prod.length;
+    products.meta.pageSize = parseInt(event.target.value);
+    products.meta.pageCount = Math.ceil(temp_prod.length / parseInt(event.target.value));
+    products.result = temp_prod.slice(0,products.meta.pageSize);
+  }
+  else {
+    products = await fetchProducts(1, parseInt(event.target.value));
+  }
 
-  setCurrentProducts(products);
+  products.meta.currentPage = 1;
+
+  setCurrentProducts(products, currentBrand);
   render(currentProducts, currentPagination);
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
   const products = await fetchProducts();
 
-  setCurrentProducts(products);
+  setCurrentProducts(products, currentBrand);
+  render(currentProducts, currentPagination);
+});
+
+selectPage.addEventListener('change', async (event) => {
+  let products = { 
+    "meta" : {},
+    "result" : []
+  };
+  if(brandfilter) {
+    products.meta.count =  temp_prod.length;
+    products.meta.pageSize = currentPagination.pageSize;
+    products.meta.currentPage = parseInt(event.target.value);
+    products.meta.pageCount = Math.ceil(temp_prod.length / currentPagination.pageSize);
+    products.result = temp_prod.slice((products.meta.currentPage - 1) * products.meta.pageSize, (products.meta.currentPage * products.meta.pageSize));
+  }
+  else {
+    products = await fetchProducts(parseInt(event.target.value), currentPagination.pageSize);
+  }
+
+  setCurrentProducts(products, currentBrand);
+  render(currentProducts, currentPagination);
+});
+
+spanBrands.addEventListener('change', async (event) => {
+  var products = {};
+  if (event.target.value === "") {
+    brandfilter = false;
+    temp_prod = [];
+    products = await fetchProducts(1, currentPagination.pageSize);
+  }
+  else {
+    const temp = currentPagination.pageSize;
+    const test = await fetchProducts(1, 1);
+    products = await fetchProducts(1, test.meta.count);
+
+    temp_prod = products.result.filter(product => {
+      return product.brand == event.target.value
+    });
+    products.meta.count =  temp_prod.length;
+    products.meta.pageSize = temp;
+    products.meta.currentPage = 1;
+    products.meta.pageCount = Math.ceil(temp_prod.length / temp);
+    products.result = temp_prod.slice(0,products.meta.pageSize);
+
+    brandfilter = true;
+  }
+
+  setCurrentProducts(products, event.target.value);
   render(currentProducts, currentPagination);
 });
