@@ -28,6 +28,7 @@ let brandFilter = false;
 let brand = "";
 let priceFilter = false;
 let dateFilter = false;
+let sorting_method = "";
 
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
@@ -37,6 +38,9 @@ const spanNbProducts = document.querySelector('#nbProducts');
 const selectBrands = document.querySelector('#brand-select');
 const spanPrice = document.querySelector('#reasonable_price');
 const spanDate = document.querySelector('#recently_released');
+const selectSort = document.querySelector('#sort-select');
+const spanNbBrands = document.querySelector('#nbBrands');
+const spanNbNew = document.querySelector('#nbNew');
 
 /**
  * Set global value
@@ -94,7 +98,7 @@ const fetchBrands = async (brand) => {
 
 const getProducts = async () => {
   var products = {};
-  if(brandFilter || priceFilter || dateFilter) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
     const temp = currentPagination.pageSize;
     const test = await fetchProducts(1, 1);
     products = await fetchProducts(1, test.meta.count);
@@ -129,6 +133,25 @@ const getProducts = async () => {
         return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
       });
     }
+    else{
+      temp_prod = products.result;
+    }
+
+    switch(sorting_method) {
+      case "price-asc":
+        temp_prod.sort((A_prod, B_prod) => (A_prod.price - B_prod.price));
+        break;
+      case "price-desc":
+        temp_prod.sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
+        break;
+      case "date-asc":
+        temp_prod.sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)));
+        break;
+      case "date-desc":
+        temp_prod.sort((A_prod, B_prod) => (new Date(A_prod.released) - new Date(B_prod.released)));
+        break;
+    }
+
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = temp;
     products.meta.currentPage = 1;
@@ -139,6 +162,7 @@ const getProducts = async () => {
     temp_prod = [];
     products = await fetchProducts(1, currentPagination.pageSize);
   }
+
   return products;
 }
 
@@ -186,10 +210,21 @@ const renderPagination = pagination => {
  * Render page selector
  * @param  {Object} pagination
  */
-const renderIndicators = pagination => {
+const renderIndicators = async pagination => {
   const {count} = pagination;
 
   spanNbProducts.innerHTML = count;
+
+  const brands = await fetchBrands();
+  spanNbBrands.innerHTML = brands.result.length;
+
+  const test = await fetchProducts(1, 1);
+  const products = await fetchProducts(1, test.meta.count);
+  
+  temp_prod = products.result.filter(product => {
+    return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+  });
+  spanNbNew.innerHTML = temp_prod.length;
 };
 
 
@@ -231,7 +266,7 @@ selectShow.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandFilter || priceFilter) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = parseInt(event.target.value);
     products.meta.pageCount = Math.ceil(temp_prod.length / parseInt(event.target.value));
@@ -259,7 +294,7 @@ selectPage.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandFilter || priceFilter) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = currentPagination.pageSize;
     products.meta.currentPage = parseInt(event.target.value);
@@ -315,3 +350,10 @@ spanDate.addEventListener('click', async (event) => {
   render(currentProducts, currentPagination);
 });
 
+selectSort.addEventListener('change', async (event) => {
+  sorting_method = event.target.value;
+
+  const products = await getProducts();
+  setCurrentProducts(products, event.target.value);
+  render(currentProducts, currentPagination);
+});
