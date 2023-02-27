@@ -24,14 +24,19 @@ let currentBrand = "";
 
 let temp_prod = [];
 
-let brandfilter = false;
+let brandFilter = false;
+let brand = "";
+let priceFilter = false;
+let dateFilter = false;
 
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
 const selectPage = document.querySelector('#page-select');
 const sectionProducts = document.querySelector('#products');
 const spanNbProducts = document.querySelector('#nbProducts');
-const spanBrands = document.querySelector('#brand-select')
+const selectBrands = document.querySelector('#brand-select');
+const spanPrice = document.querySelector('#reasonable_price');
+const spanDate = document.querySelector('#recently_released');
 
 /**
  * Set global value
@@ -77,15 +82,65 @@ const fetchBrands = async (brand) => {
     const body = await response.json();
 
     if (body.success !== true) {
-      return spanBrands;
+      return selectBrands;
     }
     return body.data;
   } catch (error) {
     console.error(error);
-    return spanBrands;
+    return selectBrands;
   }
 };
 
+
+const getProducts = async () => {
+  var products = {};
+  if(brandFilter || priceFilter || dateFilter) {
+    const temp = currentPagination.pageSize;
+    const test = await fetchProducts(1, 1);
+    products = await fetchProducts(1, test.meta.count);
+
+    if(brandFilter) {
+      temp_prod = products.result.filter(product => {
+        return product.brand == brand;
+      });
+      if(priceFilter) {
+        temp_prod = temp_prod.filter(product => {
+          return product.price < 50;
+        });
+        if(dateFilter) {
+          temp_prod = temp_prod.filter(product => {
+            return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+          });
+        }
+      }
+    }
+    else if (priceFilter) {
+      temp_prod = products.result.filter(product => {
+        return product.price < 50;
+      });
+      if(dateFilter) {
+        temp_prod = temp_prod.filter(product => {
+          return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+        });
+      }
+    }
+    else if (dateFilter) {
+      temp_prod = products.result.filter(product => {
+        return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+      });
+    }
+    products.meta.count =  temp_prod.length;
+    products.meta.pageSize = temp;
+    products.meta.currentPage = 1;
+    products.meta.pageCount = Math.ceil(temp_prod.length / temp);
+    products.result = temp_prod.slice(0,products.meta.pageSize);
+  }
+  else {
+    temp_prod = [];
+    products = await fetchProducts(1, currentPagination.pageSize);
+  }
+  return products;
+}
 
 /**
  * Render list of products
@@ -149,9 +204,9 @@ function setBrands(brands) {
     const option = ["<option value=\"", brands[i], "\">", brands[i], "</option>"].join('');
     options.push(option);
   }
-  spanBrands.innerHTML = options.join('');
+  selectBrands.innerHTML = options.join('');
 
-  var optionToSelect = spanBrands.querySelector("option[value='" + currentBrand + "']");
+  var optionToSelect = selectBrands.querySelector("option[value='" + currentBrand + "']");
   if (optionToSelect) {
     optionToSelect.selected = true;
   }
@@ -176,7 +231,7 @@ selectShow.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandfilter) {
+  if(brandFilter || priceFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = parseInt(event.target.value);
     products.meta.pageCount = Math.ceil(temp_prod.length / parseInt(event.target.value));
@@ -204,7 +259,7 @@ selectPage.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandfilter) {
+  if(brandFilter || priceFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = currentPagination.pageSize;
     products.meta.currentPage = parseInt(event.target.value);
@@ -219,30 +274,44 @@ selectPage.addEventListener('change', async (event) => {
   render(currentProducts, currentPagination);
 });
 
-spanBrands.addEventListener('change', async (event) => {
-  var products = {};
+selectBrands.addEventListener('change', async (event) => {
   if (event.target.value === "") {
-    brandfilter = false;
-    temp_prod = [];
-    products = await fetchProducts(1, currentPagination.pageSize);
+    brandFilter = false;
+    brand = "";
   }
   else {
-    const temp = currentPagination.pageSize;
-    const test = await fetchProducts(1, 1);
-    products = await fetchProducts(1, test.meta.count);
-
-    temp_prod = products.result.filter(product => {
-      return product.brand == event.target.value
-    });
-    products.meta.count =  temp_prod.length;
-    products.meta.pageSize = temp;
-    products.meta.currentPage = 1;
-    products.meta.pageCount = Math.ceil(temp_prod.length / temp);
-    products.result = temp_prod.slice(0,products.meta.pageSize);
-
-    brandfilter = true;
+    brandFilter = true;
+    brand = event.target.value;
   }
 
+  const products = await getProducts();
   setCurrentProducts(products, event.target.value);
   render(currentProducts, currentPagination);
 });
+
+spanPrice.addEventListener('click', async (event) => {
+  if (!priceFilter) {
+    priceFilter = true;
+  }
+  else {
+    priceFilter = false;
+  }
+  
+  const products = await getProducts();
+  setCurrentProducts(products, currentBrand);
+  render(currentProducts, currentPagination);
+});
+
+spanDate.addEventListener('click', async (event) => {
+  if (!dateFilter) {
+    dateFilter = true;
+  }
+  else {
+    dateFilter = false;
+  }
+  
+  const products = await getProducts();
+  setCurrentProducts(products, currentBrand);
+  render(currentProducts, currentPagination);
+});
+
