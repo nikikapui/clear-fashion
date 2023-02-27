@@ -41,6 +41,10 @@ const spanDate = document.querySelector('#recently_released');
 const selectSort = document.querySelector('#sort-select');
 const spanNbBrands = document.querySelector('#nbBrands');
 const spanNbNew = document.querySelector('#nbNew');
+const p50 = document.querySelector('#p50');
+const p90 = document.querySelector('#p90');
+const p95 = document.querySelector('#p95');
+const spanLast = document.querySelector('#last_release');
 
 /**
  * Set global value
@@ -177,7 +181,10 @@ const renderProducts = products => {
     .map(product => {
       return `
       <div class="product" id=${product.uuid}>
-        <span>${product.brand}</span>
+        <div>
+          <span>${product.brand}</span>
+          <button class="fav fav_clicked" type="button"><i class="fa fa-star"></i></button>
+        </div>
         <a href="${product.link}">${product.name}</a>
         <span>${product.price}</span>
       </div>
@@ -218,13 +225,54 @@ const renderIndicators = async pagination => {
   const brands = await fetchBrands();
   spanNbBrands.innerHTML = brands.result.length;
 
-  const test = await fetchProducts(1, 1);
-  const products = await fetchProducts(1, test.meta.count);
+  let temp_new = 0;
+  let temp_p_value = [];
+  let temp_last = {};
+  if(brandFilter || priceFilter || dateFilter) {
+    temp_new = temp_prod.filter(product => {
+      return new Date(product.released) > new Date(new Date('2022-10-12').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+    }).length;
+
+    temp_p_value = [...temp_prod].sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
+
+    temp_last = [...temp_prod].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)));
+  }
+  else {
+    const test = await fetchProducts(1, 1);
+    const products = await fetchProducts(1, test.meta.count);
+    
+    temp_new = products.result.filter(product => {
+      return new Date(product.released) > new Date(new Date('2022-10-12').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+    }).length;
+
+    temp_p_value = [...products.result].sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
+
+    temp_last = [...products.result].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)));
+  }
+  spanNbNew.innerHTML = temp_new;
+
+  if(temp_p_value.length != 0) {
+    const p50_index = Math.floor(temp_p_value.length * 0.5);
+    p50.innerHTML = temp_p_value[p50_index].price;
+    const p90_index = Math.floor(temp_p_value.length * 0.9);
+    p90.innerHTML = temp_p_value[p90_index].price;
+    const p95_index = Math.floor(temp_p_value.length * 0.95);
+    p95.innerHTML = temp_p_value[p95_index].price;
+  }
+  else{
+    p50.innerHTML = 0;
+    p90.innerHTML = 0;
+    p95.innerHTML = 0;
+  }
+
+  if (temp_last.length != 0) {
+    spanLast.innerHTML = temp_last[0].released;
+  }
+  else {
+    spanLast.innerHTML = "";
+  }
   
-  temp_prod = products.result.filter(product => {
-    return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
-  });
-  spanNbNew.innerHTML = temp_prod.length;
+
 };
 
 

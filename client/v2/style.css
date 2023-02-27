@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: pink;
+    color: #333;
+    overflow: hidden;
+}
+
+.header{
+    padding: 10px;
+    color: pink;
+    background: #333;
+    margin-bottom: 20px;
+
+    grid-area: header;
+}
+
+#wholepage{
+    display: grid;
+    /*grid-column: repeat(2, auto);*/
+    grid-template-areas: 
+    'header header header header'
+    'options content content content'
+    'options content content content'
+    'indicators indicators indicators indicators';
+}
+
+#options{
+    grid-area: options;
+    margin-top: 2.2rem;
+    max-height: 500px;
+    width: 25vw;
+}
+
+#options div{
+    margin: 0.1rem;
+}
+
+#indicators{
+    grid-area: indicators;
+}
+
+#indicators h2{
+    text-align: center;
+    margin: 1rem;
+}
+
+#indicators div{
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+#indicators div:last-child{
+    display: inline-block;
+    width: 100%;
+}
+
+#products{
+    grid-area: content;
+    overflow-y: scroll;
+    max-height: 70vh;
+    width: 75vw;
+}
+
+#products h2{
+    text-align: center;
+}
+
+#products .product{
+    border-radius: 5px;
+    background: lightpink;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#products .product div span{
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+#products .product div button{
+    float: right;
+}
+
+#products .product span:last-child{
+    float: right;
+}
+
+#products .product a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.fav{
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.fav_clicked{
+    color: yellow;
+}
+
+
+.select{
+    border: none;
+    float: right;
+    background: lightpink;
+    border-radius: 0.5px;
+    margin-right: 2rem;
+    width: 8rem;
+}
+
+.btn{
+    background: lightpink;
+    border-radius: 0.5px;
+    padding: 0.1rem;
+    margin: auto;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    border: none;
+    justify-self: center;
+}
+
+.checked{
+    background: #333;
+    color: lightpink;
+}
