@@ -5,15 +5,15 @@
 }
 
 body{
-    background: pink;
-    color: #333;
+    background: #FFF0F5;
+    color: #7339ac;
     overflow: hidden;
 }
 
 .header{
     padding: 10px;
-    color: pink;
-    background: #333;
+    color: #FFF0F5;
+    background: #7339ac;
     margin-bottom: 20px;
 
     grid-area: header;
@@ -74,7 +74,7 @@ body{
 
 #products .product{
     border-radius: 5px;
-    background: lightpink;
+    background: #d6c1ea;
     margin: 0.5rem;
     padding: 0.5rem;
 }
@@ -95,19 +95,29 @@ body{
 }
 
 #products .product a{
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
     font-weight: 500;
     font-size: 1.1rem;
 }
+#products .product a:hover{
+    color: #402060;
+    font-weight: 550;
+}
 
 .fav{
+    color: #6c33a6;
     background: inherit;
     border: none;
     cursor: pointer;
 }
 
+.fav:hover {
+    color: yellow;
+}
+
 .fav_clicked{
+    background: #d6c1ea;
     color: yellow;
 }
 
@@ -115,14 +125,15 @@ body{
 .select{
     border: none;
     float: right;
-    background: lightpink;
+    color: #7339ac;
+    background: #d6c1ea;
     border-radius: 0.5px;
     margin-right: 2rem;
     width: 8rem;
 }
 
 .btn{
-    background: lightpink;
+    background: #d6c1ea;
     border-radius: 0.5px;
     padding: 0.1rem;
     margin: auto;
@@ -132,9 +143,21 @@ body{
     width: 150px;
     border: none;
     justify-self: center;
+    color: #7339ac;
+}
+
+.btn:hover{
+    color: #402060;
+    font-weight: 550;
 }
 
 .checked{
-    background: #333;
-    color: lightpink;
+    background: #7339ac;
+    color: #d6c1ea;
+}
+
+.checked:hover{
+    background: #402060;
+    color: #d6c1ea;
+    font-weight: 550;
 }

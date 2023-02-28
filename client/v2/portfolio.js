@@ -21,6 +21,7 @@ Search for available brands list
 let currentProducts = [];
 let currentPagination = {};
 let currentBrand = "";
+let favorites = [];
 
 let temp_prod = [];
 
@@ -29,6 +30,7 @@ let brand = "";
 let priceFilter = false;
 let dateFilter = false;
 let sorting_method = "";
+let favFilter = false;
 
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
@@ -45,6 +47,7 @@ const p50 = document.querySelector('#p50');
 const p90 = document.querySelector('#p90');
 const p95 = document.querySelector('#p95');
 const spanLast = document.querySelector('#last_release');
+const spanFav = document.querySelector('#favorites');
 
 /**
  * Set global value
@@ -102,43 +105,31 @@ const fetchBrands = async (brand) => {
 
 const getProducts = async () => {
   var products = {};
-  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="") || favFilter) {
     const temp = currentPagination.pageSize;
     const test = await fetchProducts(1, 1);
     products = await fetchProducts(1, test.meta.count);
 
+    temp_prod = products.result;
     if(brandFilter) {
-      temp_prod = products.result.filter(product => {
+      temp_prod = temp_prod.filter(product => {
         return product.brand == brand;
       });
-      if(priceFilter) {
-        temp_prod = temp_prod.filter(product => {
-          return product.price < 50;
-        });
-        if(dateFilter) {
-          temp_prod = temp_prod.filter(product => {
-            return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
-          });
-        }
-      }
     }
-    else if (priceFilter) {
-      temp_prod = products.result.filter(product => {
+    if(priceFilter) {
+      temp_prod = temp_prod.filter(product => {
         return product.price < 50;
       });
-      if(dateFilter) {
-        temp_prod = temp_prod.filter(product => {
-          return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
-        });
-      }
     }
-    else if (dateFilter) {
-      temp_prod = products.result.filter(product => {
+    if(dateFilter) {
+      temp_prod = temp_prod.filter(product => {
         return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
       });
     }
-    else{
-      temp_prod = products.result;
+    if(favFilter) {
+      temp_prod = temp_prod.filter(product => {
+        return favorites.includes(product.uuid);
+      });
     }
 
     switch(sorting_method) {
@@ -177,13 +168,19 @@ const getProducts = async () => {
 const renderProducts = products => {
   const fragment = document.createDocumentFragment();
   const div = document.createElement('div');
+
   const template = products
     .map(product => {
+      var is_fav = "";
+      if(favorites.includes(product.uuid)) {
+        is_fav = "fav_clicked";
+      }
+
       return `
       <div class="product" id=${product.uuid}>
         <div>
           <span>${product.brand}</span>
-          <button class="fav fav_clicked" type="button"><i class="fa fa-star"></i></button>
+          <button class="fav ${is_fav}" type="button" onclick="setFav(this)"><i class="fa fa-star"></i></button>
         </div>
         <a href="${product.link}">${product.name}</a>
         <span>${product.price}</span>
@@ -228,7 +225,7 @@ const renderIndicators = async pagination => {
   let temp_new = 0;
   let temp_p_value = [];
   let temp_last = {};
-  if(brandFilter || priceFilter || dateFilter) {
+  if(brandFilter || priceFilter || dateFilter || favFilter) {
     temp_new = temp_prod.filter(product => {
       return new Date(product.released) > new Date(new Date('2022-10-12').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
     }).length;
@@ -314,7 +311,7 @@ selectShow.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="") || favFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = parseInt(event.target.value);
     products.meta.pageCount = Math.ceil(temp_prod.length / parseInt(event.target.value));
@@ -331,6 +328,7 @@ selectShow.addEventListener('change', async (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
+  favorites = JSON.parse(localStorage.getItem('favorites'));
   const products = await fetchProducts();
 
   setCurrentProducts(products, currentBrand);
@@ -342,7 +340,7 @@ selectPage.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(brandFilter || priceFilter || dateFilter || (sorting_method !="")) {
+  if(brandFilter || priceFilter || dateFilter || (sorting_method !="") || favFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = currentPagination.pageSize;
     products.meta.currentPage = parseInt(event.target.value);
@@ -375,9 +373,11 @@ selectBrands.addEventListener('change', async (event) => {
 spanPrice.addEventListener('click', async (event) => {
   if (!priceFilter) {
     priceFilter = true;
+    spanPrice.classList.add('checked');
   }
   else {
     priceFilter = false;
+    spanPrice.classList.remove('checked');
   }
   
   const products = await getProducts();
@@ -388,9 +388,11 @@ spanPrice.addEventListener('click', async (event) => {
 spanDate.addEventListener('click', async (event) => {
   if (!dateFilter) {
     dateFilter = true;
+    spanDate.classList.add('checked');
   }
   else {
     dateFilter = false;
+    spanDate.classList.remove('checked');
   }
   
   const products = await getProducts();
@@ -403,5 +405,36 @@ selectSort.addEventListener('change', async (event) => {
 
   const products = await getProducts();
   setCurrentProducts(products, event.target.value);
+  render(currentProducts, currentPagination);
+});
+
+const setFav = (button) => {
+  if(!favorites.includes(button.parentNode.parentNode.id)) {
+    favorites.push(button.parentNode.parentNode.id);
+    button.classList.add('fav_clicked');
+  }
+  else {
+    let index = favorites.indexOf(button.parentNode.parentNode.id);
+    if (index !== -1) {
+      favorites.splice(index, 1); // remove 1 element starting from the index
+    }
+    button.classList.remove('fav_clicked');
+  }
+
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+spanFav.addEventListener('click', async (event) => {
+  if (!favFilter) {
+    favFilter = true;
+    spanFav.classList.add('checked');
+  }
+  else {
+    favFilter = false;
+    spanFav.classList.remove('checked');
+  }
+  
+  const products = await getProducts();
+  setCurrentProducts(products, currentBrand);
   render(currentProducts, currentPagination);
 });
