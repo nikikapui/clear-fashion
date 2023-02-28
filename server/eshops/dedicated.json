@@ -1,0 +1,322 @@
+[
+    {
+      "name": "Shirt Marstrand Ocean Ink Multi Color",
+      "price": 89
+    },
+    {
+      "name": "Hoodie Falun Lawn Chair Oat White",
+      "price": 89
+    },
+    {
+      "name": "T-shirt Stockholm Newman White",
+      "price": 39
+    },
+    {
+      "name": "Shirt Marstrand Zebra Blue",
+      "price": 89
+    },
+    {
+      "name": "Shirt Marstrand Palm Leaves Green",
+      "price": 89
+    },
+    {
+      "name": "Shirt Marstrand Butterfly Oat White",
+      "price": 89
+    },
+    {
+      "name": "T-shirt Stockholm No Soup White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Kramer Black",
+      "price": 39
+    },
+    {
+      "name": "Soft Cap Seinfeld Logo Black",
+      "price": 39
+    },
+    {
+      "name": "Sweatshirt Malmoe Sun Emb Oat White",
+      "price": 99
+    },
+    {
+      "name": "Sweatshirt Malmoe Lawn Chair Oat White",
+      "price": 79
+    },
+    {
+      "name": "Sweatshirt Malmoe Lawn Chair Black",
+      "price": 79
+    },
+    {
+      "name": "Sweatshirt Malmoe Lawn Chair AOP Charcoal",
+      "price": 89
+    },
+    {
+      "name": "Hoodie Falun Lawn Chair Black",
+      "price": 89
+    },
+    {
+      "name": "Hoodie Falun Lawn Chair AOP Charcoal",
+      "price": 99
+    },
+    {
+      "name": "T-shirt Stockholm Brush Waves Oat White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Brush Waves Logo Oat White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Wave Sun White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Paper Cut Surfboards White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Paper Cut Surfboards Black",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Palm Row Cashmere Pink",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Palm Row Black",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Lone Surfer White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Lawn Chair White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Lawn Chair Charcoal",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Lawn Chair AOP Off White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Color Waves Charcoal",
+      "price": 39
+    },
+    {
+      "name": "Sweatshorts Halmstad Lawn Chair AOP Charcoal",
+      "price": 79
+    },
+    {
+      "name": "T-shirt Stockholm Seinfeld Family White",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm Jerry Black",
+      "price": 39
+    },
+    {
+      "name": "T-shirt Stockholm George Black",
+      "price": 39
+    },
+    {
+      "name": "Boxer Briefs Kalix Bike Pattern Navy",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Bike Pattern 3-pack",
+      "price": 59
+    },
+    {
+      "name": "Boxer Briefs Kalix Japanese Wave Navy",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Bike Pattern Burgundy",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Bike Pattern Black",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Waves White",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Waves Navy",
+      "price": 24
+    },
+    {
+      "name": "Boxer Briefs Kalix Waves 3-Pack",
+      "price": 59
+    },
+    {
+      "name": "Boxer Briefs Kalix Brush Wave Navy",
+      "price": 24
+    },
+    {
+        "name": "Shirt Nibe Zebra Blue",
+        "price": 89
+    },
+    {
+        "name": "Shirt Nibe Butterfly Oat White",
+        "price": 89
+    },
+    {
+        "name": "Shirt Ljunga Zebra Blue",
+        "price": 99
+    },
+    {
+        "name": "Shirt Ljunga Palm Leaves Green",
+        "price": 99
+    },
+    {
+        "name": "Wrap Dress Kungshamn Zebra Blue",
+        "price": 99
+    },
+    {
+        "name": "Wrap Dress Kungshamn Palm Leaves Green",
+        "price": 99
+    },
+    {
+        "name": "Wrap Dress Kungshamn Butterfly Oat White",
+        "price": 99
+    },
+    {
+        "name": "Wrap Dress Kungshamn Black",
+        "price": 99
+    },
+    {
+        "name": "Dress Reimersholme Ocean Ink Multi Color",
+        "price": 99
+    },
+    {
+        "name": "Dress Reimersholme Black",
+        "price": 89
+    },
+    {
+        "name": "Dress Bornholm Zebra Blue",
+        "price": 119
+    },
+    {
+        "name": "Dress Bornholm Ocean Ink Multi Color",
+        "price": 129
+    },
+    {
+        "name": "Dress Bornholm Butterfly Oat White",
+        "price": 129
+    },
+    {
+        "name": "Soft Cap Seinfeld Logo Black",
+        "price": 39
+    },
+    {
+        "name": "Sweatpants Tensta Butterfly Oat White",
+        "price": 89
+    },
+    {
+        "name": "Bikini Top Sandnes Black",
+        "price": 39
+    },
+    {
+        "name": "Blouse Odense Butterfly Oat White",
+        "price": 79
+    },
+    {
+        "name": "Shirt Dress Falsterbo Brush Strokes Multi Color",
+        "price": 139
+    },
+    {
+        "name": "Shirt Dress Falsterbo Night Florals Black",
+        "price": 129
+    },
+    {
+        "name": "T-shirt Visby Paper Cut Surfboards White",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Visby Palm Row Cashmere Pink",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Visby Palm Row Black",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Visby Lawn Chair AOP Off-White",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Visby Brush Waves Oat White",
+        "price": 39
+    },
+    {
+        "name": "Sweatshirt Ystad Raglan Sun Emb Oat White",
+        "price": 99
+    },
+    {
+        "name": "T-shirt Vadstena Lace Black",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Kivik Sunburn Orange",
+        "price": 39
+    },
+    {
+        "name": "T-shirt Kivik Sea Green",
+        "price": 39
+    },
+    {
+        "name": "Top Flor Sunburn Orange",
+        "price": 39
+    },
+    {
+        "name": "Top Flor Sea Green",
+        "price": 39
+    },
+    {
+        "name": "Top Lykke Black",
+        "price": 34
+    },
+    {
+        "name": "Top Lykke Sunburn Orange",
+        "price": 34
+    },
+    {
+        "name": "Top Lykke Sea Green",
+        "price": 34
+    },
+    {
+        "name": "Hoodie Sundborn Small Flowers AOP Black",
+        "price": 99
+    },
+    {
+        "name": "Skirt Klippan Butterfly Oat White",
+        "price": null
+    },
+    {
+        "name": "Pants Koster Zebra Blue",
+        "price": null
+    },
+    {
+        "name": "Pants Koster Ocean Ink Multi Color",
+        "price": null
+    },
+    {
+        "name": "Pants Koster Butterfly Oat White",
+        "price": null
+    },
+    {
+        "name": "Soft Bra Junsele Quiet Green",
+        "price": 24
+    },
+    {
+        "name": "Soft Bra Junsele Chateau Pink",
+        "price": 24
+    }
+]
