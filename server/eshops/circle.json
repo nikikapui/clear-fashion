@@ -1,202 +1,296 @@
 [
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt de Sport Iconic",
-      "price": 59
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.157Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Legging Get in Shape",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T08:57:26.159Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de Sport One For All",
-      "price": 69
+      "price": 69,
+      "scrape_date": "2023-03-04T08:57:26.160Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Brassière Support Me Softly",
-      "price": 69
+      "price": 69,
+      "scrape_date": "2023-03-04T08:57:26.161Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Crop-top sport Smooth Operator",
-      "price": 59
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.162Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Le tour de cou Protect",
-      "price": 19
+      "price": 19,
+      "scrape_date": "2023-03-04T08:57:26.162Z"
     },
     {
-      "name": "T-shirt Technique Agility",
-      "price": 59
-    },
-    {
+      "brand": "Circle Sportswear",
       "name": "T-shirt Iconic Manifesto",
-      "price": 65
+      "price": 65,
+      "scrape_date": "2023-03-04T08:57:26.163Z"
     },
     {
+      "brand": "Circle Sportswear",
+      "name": "T-shirt Technique Agility",
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.163Z"
+    },
+    {
+      "brand": "Circle Sportswear",
       "name": "T-shirt Jim",
-      "price": 69
+      "price": 69,
+      "scrape_date": "2023-03-04T08:57:26.163Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de Sport Back on Track",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T08:57:26.166Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Legging Ava",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T08:57:26.166Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Débardeur de sport Get Comfy",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T08:57:26.167Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Brassière Level Up",
-      "price": 79
+      "price": 79,
+      "scrape_date": "2023-03-04T08:57:26.173Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Haut à manches longues Femme - Motivation",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T08:57:26.173Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Haut à manches longues Homme - Motivation",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T08:57:26.173Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de sport femme Allure",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T08:57:26.173Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Brassière Yvette",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T08:57:26.173Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de Sport Get Shorty",
-      "price": 69
+      "price": 69,
+      "scrape_date": "2023-03-04T08:57:26.174Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Haut sans manche Muscle Tee",
-      "price": 59
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.174Z"
     },
     {
+      "brand": "Circle Sportswear",
+      "name": "Hoodie Oversize Get Lucky",
+      "price": 149,
+      "scrape_date": "2023-03-04T08:57:26.174Z"
+    },
+    {
+      "brand": "Circle Sportswear",
       "name": "Chaussettes de running Speedy High",
-      "price": 22
+      "price": 22,
+      "scrape_date": "2023-03-04T08:57:26.174Z"
     },
     {
-      "name": "Hoodie Oversize Homme Get Lucky",
-      "price": 149
-    },
-    {
-      "name": "Hoodie Unisexe Get Lucky",
-      "price": 149
-    },
-    {
+      "brand": "Circle Sportswear",
       "name": "Pantalon de Jogging Get Lucky",
-      "price": 129
+      "price": 129,
+      "scrape_date": "2023-03-04T08:57:26.175Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Tapis de yoga en liège Rise",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T08:57:26.175Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Sweat Oversize Get Lucky",
-      "price": 139
+      "price": 139,
+      "scrape_date": "2023-03-04T08:57:26.175Z"
     },
     {
-      "name": "Legging de Running Homme Men in Tights",
-      "price": 95
-    },
-    {
+      "brand": "Circle Sportswear",
       "name": "T-shirt à manches longues Feel Good POP",
-      "price": 79
+      "price": 79,
+      "scrape_date": "2023-03-04T08:57:26.175Z"
     },
     {
+      "brand": "Circle Sportswear",
+      "name": "Legging de Running Homme Men in Tights",
+      "price": 95,
+      "scrape_date": "2023-03-04T08:57:26.176Z"
+    },
+    {
+      "brand": "Circle Sportswear",
       "name": "Gourde en aluminium - Protect",
-      "price": 20
+      "price": 20,
+      "scrape_date": "2023-03-04T08:57:26.176Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Gourde en plastique recyclé - Sunrise Rose",
-      "price": 10
+      "price": 10,
+      "scrape_date": "2023-03-04T08:57:26.176Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt de Sport Iconic POP",
-      "price": 65
+      "price": 65,
+      "scrape_date": "2023-03-04T08:57:26.176Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de Compression Hit The Road",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T08:57:26.176Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt de Sport Get Ready",
-      "price": 59
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.177Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Tapis de yoga recyclé",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T08:57:26.177Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Chaussettes de running Speedy Low",
-      "price": 19
+      "price": 19,
+      "scrape_date": "2023-03-04T08:57:26.177Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt de Sport Get Ready Quick Dry",
-      "price": 59
+      "price": 59,
+      "scrape_date": "2023-03-04T08:57:26.177Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Gourde en plastique recyclé - Sunrise Bleue",
-      "price": 11
+      "price": 11,
+      "scrape_date": "2023-03-04T08:57:26.177Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Le tour de cou Protect Quick Dry",
-      "price": 19
+      "price": 19,
+      "scrape_date": "2023-03-04T08:57:26.178Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Legging Get in Shape 53",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T08:57:26.178Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt à manches longues Feel Good",
-      "price": 79
+      "price": 79,
+      "scrape_date": "2023-03-04T08:57:26.178Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "T-shirt Iconic Social",
-      "price": 50
+      "price": 50,
+      "scrape_date": "2023-03-04T08:57:26.178Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Chaussettes de running Stripes",
-      "price": 25
+      "price": 25,
+      "scrape_date": "2023-03-04T08:57:26.179Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Débardeur Get Comfy Quick Dry",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T08:57:26.179Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Débardeur de sport Free Your Mind",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T08:57:26.179Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Débardeur de sport Free Your Mind Quick Dry",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T08:57:26.179Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Gourde Sunny",
-      "price": 22
+      "price": 22,
+      "scrape_date": "2023-03-04T08:57:26.179Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Haut à manches longues Homme Flow",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T08:57:26.180Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Haut à manches longues Femme Flow",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T08:57:26.180Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Short de Sport Swell",
-      "price": 119
+      "price": 119,
+      "scrape_date": "2023-03-04T08:57:26.180Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Legging de Running Femme Lightning",
-      "price": 125
+      "price": 125,
+      "scrape_date": "2023-03-04T08:57:26.180Z"
     },
     {
+      "brand": "Circle Sportswear",
       "name": "Legging de Running Homme Lightning",
-      "price": 125
+      "price": 125,
+      "scrape_date": "2023-03-04T08:57:26.181Z"
     }
   ]

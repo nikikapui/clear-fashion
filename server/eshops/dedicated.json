@@ -1,306 +1,482 @@
 [
     {
+      "brand": "DEDICATED",
       "name": "Shirt Marstrand Ocean Ink Multi Color",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.706Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Hoodie Falun Lawn Chair Oat White",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.706Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Newman White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.706Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Shirt Marstrand Zebra Blue",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.707Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Shirt Marstrand Palm Leaves Green",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.707Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Shirt Marstrand Butterfly Oat White",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.708Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm No Soup White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.708Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Kramer Black",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.708Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Soft Cap Seinfeld Logo Black",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.708Z"
     },
     {
+      "brand": "DEDICATED",
+      "name": "Board Shorts Toroe Black",
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.708Z"
+    },
+    {
+      "brand": "DEDICATED",
+      "name": "Board Shorts Toroe Big Leaf Duck Green",
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
+    },
+    {
+      "brand": "DEDICATED",
+      "name": "Board Shorts Toroe Painted Palmtrees Black",
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
+    },
+    {
+      "brand": "DEDICATED",
+      "name": "Board Shorts Toroe Ditsy Sun Copper Brown",
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
+    },
+    {
+      "brand": "DEDICATED",
       "name": "Sweatshirt Malmoe Sun Emb Oat White",
-      "price": 99
+      "price": 99,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Sweatshirt Malmoe Lawn Chair Oat White",
-      "price": 79
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Sweatshirt Malmoe Lawn Chair Black",
-      "price": 79
+      "price": 79,
+      "scrape_date": "2023-03-04T09:00:52.709Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Sweatshirt Malmoe Lawn Chair AOP Charcoal",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.710Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Hoodie Falun Lawn Chair Black",
-      "price": 89
+      "price": 89,
+      "scrape_date": "2023-03-04T09:00:52.710Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "Hoodie Falun Lawn Chair AOP Charcoal",
-      "price": 99
+      "price": 99,
+      "scrape_date": "2023-03-04T09:00:52.710Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Brush Waves Oat White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.710Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Brush Waves Logo Oat White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.710Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Wave Sun White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.711Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Paper Cut Surfboards White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.711Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Paper Cut Surfboards Black",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.711Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Palm Row Cashmere Pink",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.711Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Palm Row Black",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.712Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Lone Surfer White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.712Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Lawn Chair White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.712Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Lawn Chair Charcoal",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.712Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Lawn Chair AOP Off White",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.712Z"
     },
     {
+      "brand": "DEDICATED",
       "name": "T-shirt Stockholm Color Waves Charcoal",
-      "price": 39
+      "price": 39,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "Sweatshorts Halmstad Lawn Chair AOP Charcoal",
-      "price": 79
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Zebra Blue",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "T-shirt Stockholm Seinfeld Family White",
-      "price": 39
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Sodalite Blue",
+      "price": 59,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "T-shirt Stockholm Jerry Black",
-      "price": 39
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Seabirds Sunset Multi Color",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "T-shirt Stockholm George Black",
-      "price": 39
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Sea Green",
+      "price": 59,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "Boxer Briefs Kalix Bike Pattern Navy",
-      "price": 24
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Painted Palmtrees Black",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "Boxer Briefs Kalix Bike Pattern 3-pack",
-      "price": 59
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Dusty Yellow",
+      "price": 59,
+      "scrape_date": "2023-03-04T09:00:52.713Z"
     },
     {
-      "name": "Boxer Briefs Kalix Japanese Wave Navy",
-      "price": 24
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Ditsy Sun Copper Brown",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.714Z"
     },
     {
-      "name": "Boxer Briefs Kalix Bike Pattern Burgundy",
-      "price": 24
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Coral Gems Dusty Yellow",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.714Z"
     },
     {
-      "name": "Boxer Briefs Kalix Bike Pattern Black",
-      "price": 24
+      "brand": "DEDICATED",
+      "name": "Swim Shorts Sandhamn Coral Gems Black",
+      "price": 69,
+      "scrape_date": "2023-03-04T09:00:52.714Z"
     },
     {
-      "name": "Boxer Briefs Kalix Waves White",
-      "price": 24
-    },
-    {
-      "name": "Boxer Briefs Kalix Waves Navy",
-      "price": 24
-    },
-    {
-      "name": "Boxer Briefs Kalix Waves 3-Pack",
-      "price": 59
-    },
-    {
-      "name": "Boxer Briefs Kalix Brush Wave Navy",
-      "price": 24
-    },
-    {
+        "brand": "DEDICATED",
         "name": "Shirt Nibe Zebra Blue",
-        "price": 89
+        "price": 89,
+        "scrape_date": "2023-03-04T09:01:34.029Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Shirt Nibe Butterfly Oat White",
-        "price": 89
+        "price": 89,
+        "scrape_date": "2023-03-04T09:01:34.029Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Shirt Ljunga Zebra Blue",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.029Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Shirt Ljunga Palm Leaves Green",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.032Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Wrap Dress Kungshamn Zebra Blue",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.032Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Wrap Dress Kungshamn Palm Leaves Green",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Wrap Dress Kungshamn Butterfly Oat White",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Wrap Dress Kungshamn Black",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Dress Reimersholme Ocean Ink Multi Color",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Dress Reimersholme Black",
-        "price": 89
+        "price": 89,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Dress Bornholm Zebra Blue",
-        "price": 119
+        "price": 119,
+        "scrape_date": "2023-03-04T09:01:34.033Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Dress Bornholm Ocean Ink Multi Color",
-        "price": 129
+        "price": 129,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Dress Bornholm Butterfly Oat White",
-        "price": 129
+        "price": 129,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Soft Cap Seinfeld Logo Black",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Sweatpants Tensta Butterfly Oat White",
-        "price": 89
+        "price": 89,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
     },
     {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Zebra Blue",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Sodalite Blue",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.034Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Painted Palmtrees Black",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.035Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Ocean Ink Dark Multi Color",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.035Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Irregular Stripe Multi Colour",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.035Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bikini Top Sandnes Duck Green",
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.035Z"
+    },
+    {
+        "brand": "DEDICATED",
         "name": "Bikini Top Sandnes Black",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.035Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Blouse Odense Butterfly Oat White",
-        "price": 79
+        "price": 79,
+        "scrape_date": "2023-03-04T09:01:34.037Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Shirt Dress Falsterbo Brush Strokes Multi Color",
-        "price": 139
+        "price": 139,
+        "scrape_date": "2023-03-04T09:01:34.037Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Shirt Dress Falsterbo Night Florals Black",
-        "price": 129
+        "price": 129,
+        "scrape_date": "2023-03-04T09:01:34.037Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Visby Paper Cut Surfboards White",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.037Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Visby Palm Row Cashmere Pink",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.037Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Visby Palm Row Black",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.038Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Visby Lawn Chair AOP Off-White",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.040Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Visby Brush Waves Oat White",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.040Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Sweatshirt Ystad Raglan Sun Emb Oat White",
-        "price": 99
+        "price": 99,
+        "scrape_date": "2023-03-04T09:01:34.040Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Vadstena Lace Black",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.040Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Kivik Sunburn Orange",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "T-shirt Kivik Sea Green",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Top Flor Sunburn Orange",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Top Flor Sea Green",
-        "price": 39
+        "price": 39,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
     },
     {
+        "brand": "DEDICATED",
+        "name": "Bike Tights Kortebo Painted Palmtrees Black",
+        "price": 49,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
+    },
+    {
+        "brand": "DEDICATED",
+        "name": "Bike Tights Kortebo Ocean Ink Dark Multi Color",
+        "price": 49,
+        "scrape_date": "2023-03-04T09:01:34.041Z"
+    },
+    {
+        "brand": "DEDICATED",
         "name": "Top Lykke Black",
-        "price": 34
+        "price": 34,
+        "scrape_date": "2023-03-04T09:01:34.042Z"
     },
     {
+        "brand": "DEDICATED",
         "name": "Top Lykke Sunburn Orange",
-        "price": 34
-    },
-    {
-        "name": "Top Lykke Sea Green",
-        "price": 34
-    },
-    {
-        "name": "Hoodie Sundborn Small Flowers AOP Black",
-        "price": 99
-    },
-    {
-        "name": "Soft Bra Junsele Quiet Green",
-        "price": 24
-    },
-    {
-        "name": "Soft Bra Junsele Chateau Pink",
-        "price": 24
-    }
+        "price": 34,
+        "scrape_date": "2023-03-04T09:01:34.042Z"
+    }    
 ]

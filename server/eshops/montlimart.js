@@ -19,8 +19,10 @@ const parse = data => {
           .find('.price')
           .text()
       );
+      const brand = "Montlimart";
+      const scrape_date = new Date().toISOString();
 
-      return {name, price};
+      return {brand, name, price, scrape_date};
     })
     .get();
 };

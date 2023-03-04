@@ -21,8 +21,10 @@ const parse = data => {
           .find('.productList-price')
           .text()
       );
+      const brand = "DEDICATED";
+      const scrape_date = new Date().toISOString();
 
-      return {name, price};
+      return {brand, name, price, scrape_date};
     })
     .get();
 };

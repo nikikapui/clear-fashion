@@ -23,8 +23,10 @@ const parse = data => {
           .text()
           .slice(1)
       );
+      const brand = "Circle Sportswear";
+      const scrape_date = new Date().toISOString();
 
-      return {name, price};
+      return {brand, name, price, scrape_date};
     })
     .get();
 };

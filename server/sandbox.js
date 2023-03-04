@@ -8,7 +8,7 @@ async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/men/news') {
   try {
     console.log(`🕵️‍♀️  browsing ${eshop} eshop`);
 
-    const products = await circle.scrape(eshop);
+    const products = await montlimart.scrape(eshop);
 
     console.log(JSON.stringify(products));
     console.log('done');

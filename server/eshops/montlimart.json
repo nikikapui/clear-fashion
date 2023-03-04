@@ -1,890 +1,1334 @@
 [
     {
+      "brand": "Montlimart",
       "name": "PULL POLLEN",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.908Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT LIGUE",
-      "price": 70
+      "price": 70,
+      "scrape_date": "2023-03-04T09:04:01.909Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT FUSION",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.909Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BASKETS IMPACT",
-      "price": 149
+      "price": 149,
+      "scrape_date": "2023-03-04T09:04:01.910Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL PLANETE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.910Z"
     },
     {
-      "name": "PULL DAMIER",
-      "price": 140
+      "brand": "Montlimart",
+      "name": "T-SHIRT RESPECT",
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.910Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT RESSOURCE",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.911Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES TENNIS",
-      "price": 18
+      "price": 18,
+      "scrape_date": "2023-03-04T09:04:01.911Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT MONDE",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.911Z"
     },
     {
+      "brand": "Montlimart",
       "name": "JEAN THOMAS",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.911Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.911Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE-VILLE",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.912Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.912Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ALENTOUR",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.912Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.912Z"
     },
     {
-      "name": "CHEMISE MONTLIMART",
-      "price": 95
-    },
-    {
-      "name": "PULL PLANETE",
-      "price": 135
-    },
-    {
+      "brand": "Montlimart",
       "name": "PULL EVOLUTION",
-      "price": 130
+      "price": 130,
+      "scrape_date": "2023-03-04T09:04:01.912Z"
     },
     {
+      "brand": "Montlimart",
+      "name": "PULL PLANETE",
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
+    },
+    {
+      "brand": "Montlimart",
+      "name": "CHEMISE MONTLIMART",
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
+    },
+    {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
     },
     {
-      "name": "CHEMISE CENTRE-VILLE",
-      "price": 105
+      "brand": "Montlimart",
+      "name": "PULL DAMIER",
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CEINTURE KILOMETRE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.913Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ALENTOUR",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "IMPERMEABLE AVERSE",
-      "price": 170
+      "price": 170,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL POLLEN",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES SEMAINIER MONTLISOCK",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.914Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.915Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT SYMBOLE",
-      "price": 70
+      "price": 70,
+      "scrape_date": "2023-03-04T09:04:01.915Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.915Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SURTOUT",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.915Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-      "price": 45
+      "price": 45,
+      "scrape_date": "2023-03-04T09:04:01.915Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT INITIAL",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.916Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT CITADIN",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.916Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VARIATION",
-      "price": 130
+      "price": 130,
+      "scrape_date": "2023-03-04T09:04:01.916Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT FUSION",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.916Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL NATAL",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.917Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT IDEAL",
-      "price": 60
+      "price": 60,
+      "scrape_date": "2023-03-04T09:04:01.917Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.917Z"
     },
     {
-      "name": "PULL NUAGE",
-      "price": 150
+      "brand": "Montlimart",
+      "name": "CHEMISE CENTRE-VILLE",
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.917Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CEINTURE KILOMETRE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT LIGUE",
-      "price": 70
+      "price": 70,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "GILET NOSTALGIE",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.918Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT MONDE",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL LIBRE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VARIATION",
-      "price": 130
+      "price": 130,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ALENTOUR",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT IDEAL",
-      "price": 60
+      "price": 60,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL PLANETE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CEINTURE KILOMETRE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.919Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL PLANETE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SURTOUT",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL LIBRE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT RESPECT",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES TENNIS",
-      "price": 18
+      "price": 18,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VERITABLE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.920Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL PANORAMA",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "VESTE ATELIER",
-      "price": 170
+      "price": 170,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT MI-TEMPS",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT JOUEUR",
-      "price": 70
+      "price": 70,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "POLO PARTAGE",
-      "price": 90
+      "price": 90,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ALPIN",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.921Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CAMPUS",
-      "price": 100
+      "price": 100,
+      "scrape_date": "2023-03-04T09:04:01.924Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.924Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT ENERGIE",
-      "price": 120
+      "price": 120,
+      "scrape_date": "2023-03-04T09:04:01.924Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SURTOUT",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.924Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT SYMBOLE",
-      "price": 70
+      "price": 70,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL CHALEUREUX",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT RESPECT",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL BRISE",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CLIMAT",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.925Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CEINTURE KILOMETRE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL NATAL",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT PIERRE",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CLIMAT",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CEINTURE KILOMETRE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE-VILLE",
-      "price": 100
+      "price": 100,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT RESPECT",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL NATAL",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.926Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VERITABLE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VERITABLE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL EVOLUTION",
-      "price": 130
+      "price": 130,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES CHEVRON",
-      "price": 17
+      "price": 17,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT RESPECT",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VERITABLE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL EVOLUTION",
-      "price": 130
+      "price": 130,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE-VILLE",
-      "price": 100
+      "price": 100,
+      "scrape_date": "2023-03-04T09:04:01.927Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT DETENTE",
-      "price": 115
+      "price": 115,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "JOGGING MOELLEUX",
-      "price": 100
+      "price": 100,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "BOOTS MONTPLUIE",
-      "price": 85
+      "price": 85,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
-      "name": "T-SHIRT RESPECT",
-      "price": 75
+      "brand": "Montlimart",
+      "name": "PULL NUAGE",
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL BRISE",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ORIGINE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.928Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-      "price": 45
+      "price": 45,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-      "price": 45
+      "price": 45,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT DETENTE",
-      "price": 115
+      "price": 115,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT INITIAL",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CLIMAT",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT MI-TEMPS",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SURTOUT",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL ALENTOUR",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.929Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SURTOUT",
-      "price": 110
+      "price": 110,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CLIMAT",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE BOURG",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "POLO RECORD",
-      "price": 80
+      "price": 80,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES COFFRET COTELE",
-      "price": 45
+      "price": 45,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL VERITABLE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT PAUL",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL DAMIER",
-      "price": 140
+      "price": 140,
+      "scrape_date": "2023-03-04T09:04:01.930Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL PLANETE",
-      "price": 135
+      "price": 135,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE-VILLE",
-      "price": 115
+      "price": 115,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ICONE",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT BLASON",
-      "price": 65
+      "price": 65,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT REMY",
-      "price": 155
+      "price": 155,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "POLO MONTPOLO",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.931Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHAUSSETTES MONTLISOCKS",
-      "price": 15
+      "price": 15,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT PIERRE",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT BLASON",
-      "price": 65
+      "price": 65,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT ESSAIM",
-      "price": 55
+      "price": 55,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT PIERRE",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "SWEAT CLIMAT",
-      "price": 95
+      "price": 95,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "POLO MONTPOLO",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "POLO MONTPOLO",
-      "price": 75
+      "price": 75,
+      "scrape_date": "2023-03-04T09:04:01.932Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE CENTRE BOURG",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "T-SHIRT IDEAL",
-      "price": 60
+      "price": 60,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE MONTLIMART",
-      "price": 105
+      "price": 105,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT PIERRE",
-      "price": 150
+      "price": 150,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "PULL NATAL",
-      "price": 145
+      "price": 145,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT REMY",
-      "price": 155
+      "price": 155,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+      "brand": "Montlimart",
       "name": "CHEMISE SAINT REMY",
-      "price": 160
+      "price": 160,
+      "scrape_date": "2023-03-04T09:04:01.933Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.267Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.276Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.277Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.277Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.281Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BASKETS IMPACT",
-        "price": 149
+        "price": 149,
+        "scrape_date": "2023-03-04T09:04:56.282Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.283Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BASKETS IMPACT",
-        "price": 149
+        "price": 149,
+        "scrape_date": "2023-03-04T09:04:56.283Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.283Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BASKETS IMPACT",
-        "price": 149
+        "price": 149,
+        "scrape_date": "2023-03-04T09:04:56.283Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BOOTS MONTPLUIE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:04:56.283Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.466Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CEINTURE KILOMETRE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.466Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.467Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.467Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CEINTURE KILOMETRE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.467Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.468Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES TENNIS",
-        "price": 18
+        "price": 18,
+        "scrape_date": "2023-03-04T09:06:04.468Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.468Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.468Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CASQUETTE PIXEL",
-        "price": 75
+        "price": 75,
+        "scrape_date": "2023-03-04T09:06:04.468Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CEINTURE KILOMETRE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.469Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES TENNIS",
-        "price": 18
+        "price": 18,
+        "scrape_date": "2023-03-04T09:06:04.469Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CEINTURE KILOMETRE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.469Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE PROMESSE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSONS MARTIN",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES SEMAINIER MONTLISOCK",
-        "price": 95
+        "price": 95,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE CHANTERELLE",
-        "price": 80
+        "price": 80,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "TROUSSE VOYAGEUR",
-        "price": 25
+        "price": 25,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES CHEVRON",
-        "price": 17
+        "price": 17,
+        "scrape_date": "2023-03-04T09:06:04.470Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES COFFRET MONTLISOCKS",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSONS MARTIN",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE TORSADE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GANTS TACTILES PLEYNET",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES COFFRET COTELE",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE TORSADE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET VALLEE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.471Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GANTS TACTILES PLEYNET",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.472Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET MONTAGNE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.472Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE TORSADE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.473Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET POMPOM",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.473Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CEINTURE KILOMETRE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.473Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSETTES MONTLISOCKS",
-        "price": 15
+        "price": 15,
+        "scrape_date": "2023-03-04T09:06:04.473Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET ALTITUDE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.473Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET POMPOM",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.474Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE CHANTERELLE",
-        "price": 80
+        "price": 80,
+        "scrape_date": "2023-03-04T09:06:04.475Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GANTS TACTILES PLEYNET",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.475Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET BICOLORE",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.475Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET VALLEE",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.475Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE CHANTERELLE",
-        "price": 80
+        "price": 80,
+        "scrape_date": "2023-03-04T09:06:04.475Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GANTS TACTILES PLEYNET",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.476Z"
     },
     {
+        "brand": "Montlimart",
         "name": "PORTE CARTE PORTEBOIS",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.476Z"
     },
     {
+        "brand": "Montlimart",
         "name": "COFFRET CADEAU",
-        "price": 6
+        "price": 6,
+        "scrape_date": "2023-03-04T09:06:04.476Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE TORSADE",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.479Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET PRAPOUTEL",
-        "price": 50
+        "price": 50,
+        "scrape_date": "2023-03-04T09:06:04.481Z"
     },
     {
+        "brand": "Montlimart",
         "name": "CHAUSSONS MARTIN",
-        "price": 55
+        "price": 55,
+        "scrape_date": "2023-03-04T09:06:04.481Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET PRAPOUTEL",
-        "price": 50
+        "price": 50,
+        "scrape_date": "2023-03-04T09:06:04.481Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GOURDE MONTLIGOURDE",
-        "price": 20
+        "price": 20,
+        "scrape_date": "2023-03-04T09:06:04.482Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET PRAPOUTEL",
-        "price": 50
+        "price": 50,
+        "scrape_date": "2023-03-04T09:06:04.482Z"
     },
     {
+        "brand": "Montlimart",
         "name": "BONNET PRAPOUTEL",
-        "price": 50
+        "price": 50,
+        "scrape_date": "2023-03-04T09:06:04.482Z"
     },
     {
+        "brand": "Montlimart",
         "name": "GANTS TACTILES PLEYNET",
-        "price": 45
+        "price": 45,
+        "scrape_date": "2023-03-04T09:06:04.486Z"
     },
     {
+        "brand": "Montlimart",
         "name": "PORTE CARTE PORTECUIR",
-        "price": 29
+        "price": 29,
+        "scrape_date": "2023-03-04T09:06:04.486Z"
     },
     {
+        "brand": "Montlimart",
         "name": "ECHARPE CHANTERELLE",
-        "price": 80
+        "price": 80,
+        "scrape_date": "2023-03-04T09:06:04.486Z"
     },
     {
+        "brand": "Montlimart",
         "name": "MAILLOT DE BAIN PLONGEON",
-        "price": 85
+        "price": 85,
+        "scrape_date": "2023-03-04T09:06:04.486Z"
     },
     {
+        "brand": "Montlimart",
         "name": "SAC GUPPYFRIEND",
-        "price": 30
-    }
+        "price": 30,
+        "scrape_date": "2023-03-04T09:06:04.487Z"
+    }    
 ]
