@@ -17,8 +17,12 @@ app.use(helmet());
 
 app.options('*', cors());
 
-app.get('/', async (request, response) => {
+app.get('/', (request, response) => {
   response.send({'ack': true, 'test': true});
+});
+
+app.get('/siker', async (request, response) => {
+  response.send({'ack': true, 'siker': true});
 });
 
 app.get('/products/search', async (request, response) => {
