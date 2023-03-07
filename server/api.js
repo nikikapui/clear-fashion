@@ -22,18 +22,18 @@ app.get('/', (request, response) => {
 });
 
 app.get('/products/search', async (request, response) => {
-  console.log("starting mongo")
+  response.send("starting mongo")
   const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
   const MONGODB_DB_NAME = 'clearfashion';
 
   const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
   const db =  client.db(MONGODB_DB_NAME);
 
-  console.log("connected")
+  response.send("connected")
 
   const collection = db.collection('products');
 
-  console.log("got prod")
+  response.send("got prod")
 
   let limit = request.query.limit;
   const brand = request.query.brand;
