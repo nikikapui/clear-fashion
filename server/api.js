@@ -28,11 +28,7 @@ app.get('/products/search', async (request, response) => {
   const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
   const db =  client.db(MONGODB_DB_NAME);
 
-  response.send("connected")
-
   const collection = db.collection('products');
-
-  response.send("got prod")
 
   let limit = request.query.limit;
   const brand = request.query.brand;
