@@ -22,7 +22,6 @@ app.get('/', (request, response) => {
 });
 
 app.get('/products/search', async (request, response) => {
-  response.send("starting mongo")
   const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
   const MONGODB_DB_NAME = 'clearfashion';
 
