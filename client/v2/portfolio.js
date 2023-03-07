@@ -330,6 +330,7 @@ selectShow.addEventListener('change', async (event) => {
 document.addEventListener('DOMContentLoaded', async () => {
   favorites = JSON.parse(localStorage.getItem('favorites'));
   const products = await fetchProducts();
+  console.log("hello")
 
   setCurrentProducts(products, currentBrand);
   render(currentProducts, currentPagination);
