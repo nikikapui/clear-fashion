@@ -69,7 +69,7 @@ const setCurrentProducts = ({result, meta}, brand) => {
 const fetchProducts = async (page = 1, size = 12) => {
   try {
     const response = await fetch(
-      `https://clear-fashion-niki-server.vercel.app/products/search`
+      `https://clear-fashion-api.vercel.app?page=${page}&size=${size}`
     );
     const body = await response.json();
 
@@ -330,7 +330,10 @@ selectShow.addEventListener('change', async (event) => {
 document.addEventListener('DOMContentLoaded', async () => {
   favorites = JSON.parse(localStorage.getItem('favorites'));
   const products = await fetchProducts();
-  console.log("hello")
+
+  if(favorites == null) {
+    favorites = []
+  }
 
   setCurrentProducts(products, currentBrand);
   render(currentProducts, currentPagination);
