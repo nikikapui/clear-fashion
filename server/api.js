@@ -21,36 +21,33 @@ app.get('/', (request, response) => {
   response.send({'ack': true, 'test': true});
 });
 
-app.get('/siker', async (request, response) => {
-  response.send({'ack': true, 'siker': true});
-});
-
 app.get('/products/search', async (request, response) => {
-  const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
-  const MONGODB_DB_NAME = 'clearfashion';
-
-  const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
-  const db =  client.db(MONGODB_DB_NAME);
-
-  const collection = db.collection('products');
-
-  let limit = request.query.limit;
-  const brand = request.query.brand;
-  const price = request.query.price;
-
-  const find = {};
-
-  if(limit == undefined) {
-    limit = 12;
-  }
-  if(brand != undefined) {
-    find["brand"] = brand;
-  }
-  if(price != undefined) {
-    find["price"] = {$lt: parseInt(price)};
-  }
-
   try{
+    const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
+    const MONGODB_DB_NAME = 'clearfashion';
+
+    const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
+    const db =  client.db(MONGODB_DB_NAME);
+
+    const collection = db.collection('products');
+
+    let limit = request.query.limit;
+    const brand = request.query.brand;
+    const price = request.query.price;
+
+    const find = {};
+
+    if(limit == undefined) {
+      limit = 12;
+    }
+    if(brand != undefined) {
+      find["brand"] = brand;
+    }
+    if(price != undefined) {
+      find["price"] = {$lt: parseInt(price)};
+    }
+
+  
     let end_result = {};
     const result = await collection.find(find).sort({price: 1}).toArray();
 
@@ -59,7 +56,8 @@ app.get('/products/search', async (request, response) => {
     end_result["results"] = result.slice(0, parseInt(limit));
     response.send(end_result);
   }
-  catch{
+  catch(exception){
+    console.log(exception)
     response.send("Invalid parameters");
   }
 });
