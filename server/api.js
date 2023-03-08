@@ -33,11 +33,15 @@ app.get('/products/search', async (request, response) => {
   let limit = request.query.limit;
   const brand = request.query.brand;
   const price = request.query.price;
+  let page = request.query.page;
 
   const find = {};
 
   if(limit == undefined) {
     limit = 12;
+  }
+  if(page == undefined) {
+    page = 1;
   }
   if(brand != undefined) {
     find["brand"] = brand;
@@ -47,12 +51,17 @@ app.get('/products/search', async (request, response) => {
   }
 
   try{
-    let end_result = {};
+    let end_result = {
+      "meta": {},
+      "result": []
+    };
     const result = await collection.find(find).sort({price: 1}).toArray();
 
-    end_result["limit"] = parseInt(limit);
-    end_result["total"] = result.length;
-    end_result["results"] = result.slice(0, parseInt(limit));
+    end_result["meta"]["count"] = result.length;
+    end_result["meta"]["currentPage"] = page;
+    end_result["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
+    end_result["meta"]["pageSize"] = parseInt(limit);
+    end_result["result"] = result.slice(page - 1, page - 1 + parseInt(limit));
     response.send(end_result);
   }
   catch{

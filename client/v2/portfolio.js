@@ -29,7 +29,7 @@ let brandFilter = false;
 let brand = "";
 let priceFilter = false;
 let dateFilter = false;
-let sorting_method = "";
+let sorting_method = "price-asc";
 let favFilter = false;
 
 // instantiate the selectors
@@ -73,6 +73,7 @@ const fetchProducts = async (page = 1, size = 12) => {
     );
     const body = await response.json();
 
+    console.log(body)
     if (body.success !== true) {
       console.error(body);
       return {currentProducts, currentPagination};
