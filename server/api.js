@@ -50,22 +50,28 @@ app.get('/products/search', async (request, response) => {
     find["price"] = {$lt: parseInt(price)};
   }
 
-  try{
-    let end_result = {
+  let end_result = {
+    "success": "",
+    "data": {
       "meta": {},
       "result": []
-    };
+    }
+  };
+  try{
     const result = await collection.find(find).sort({price: 1}).toArray();
 
-    end_result["meta"]["count"] = result.length;
-    end_result["meta"]["currentPage"] = parseInt(page);
-    end_result["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
-    end_result["meta"]["pageSize"] = parseInt(limit);
-    end_result["result"] = result.slice(parseInt(page) - 1, parseInt(page) - 1 + parseInt(limit));
+    end_result["success"] = true;
+    end_result["data"]["meta"]["count"] = result.length;
+    end_result["data"]["meta"]["currentPage"] = parseInt(page);
+    end_result["data"]["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
+    end_result["data"]["meta"]["pageSize"] = parseInt(limit);
+    end_result["data"]["result"] = result.slice(parseInt(page) - 1, parseInt(page) - 1 + parseInt(limit));
     response.send(end_result);
   }
   catch{
-    response.send("Invalid parameters");
+    end_result["success"] = false;
+    end_result["data"] = "Invalid parameters";
+    response.send(end_result);
   }
 });
 
