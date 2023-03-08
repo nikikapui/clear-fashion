@@ -58,10 +58,10 @@ app.get('/products/search', async (request, response) => {
     const result = await collection.find(find).sort({price: 1}).toArray();
 
     end_result["meta"]["count"] = result.length;
-    end_result["meta"]["currentPage"] = page;
+    end_result["meta"]["currentPage"] = parseInt(page);
     end_result["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
     end_result["meta"]["pageSize"] = parseInt(limit);
-    end_result["result"] = result.slice(page - 1, page - 1 + parseInt(limit));
+    end_result["result"] = result.slice(parseInt(page) - 1, parseInt(page) - 1 + parseInt(limit));
     response.send(end_result);
   }
   catch{
