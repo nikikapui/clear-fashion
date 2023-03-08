@@ -13,6 +13,9 @@ const parse = data => {
       const name = $(element)
         .find('.text-reset')
         .text()
+        .trim() + " " + $(element)
+        .find('.product-miniature__color')
+        .text()
         .trim();
       const price = parseInt(
         $(element)
@@ -21,8 +24,12 @@ const parse = data => {
       );
       const brand = "Montlimart";
       const scrape_date = new Date().toISOString();
+      const link = $(element)
+        .find('.product-miniature__thumb-link')
+        .attr()
+        .href
 
-      return {brand, name, price, scrape_date};
+      return {brand, name, price, link, scrape_date};
     })
     .get();
 };

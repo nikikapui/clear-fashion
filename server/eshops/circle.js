@@ -25,8 +25,14 @@ const parse = data => {
       );
       const brand = "Circle Sportswear";
       const scrape_date = new Date().toISOString();
-
-      return {brand, name, price, scrape_date};
+      const link = "https://shop.circlesportswear.com" +
+        $(element)
+        .find('.card__inner')
+        .find('.full-unstyled-link')
+        .attr()
+        .href
+        
+      return {brand, name, price, link, scrape_date};
     })
     .get();
 };

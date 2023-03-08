@@ -69,7 +69,7 @@ const setCurrentProducts = ({result, meta}, brand) => {
 const fetchProducts = async (page = 1, size = 12) => {
   try {
     const response = await fetch(
-      `https://clear-fashion-api.vercel.app?page=${page}&size=${size}`
+      `https://clear-fashion-nikikapui.vercel.app/products/search?page=${page}&size=${size}`
     );
     const body = await response.json();
 
@@ -92,6 +92,8 @@ const fetchBrands = async (brand) => {
       `https://clear-fashion-api.vercel.app/brands`
     );
     const body = await response.json();
+
+    console.log(body)
 
     if (body.success !== true) {
       return selectBrands;
@@ -129,7 +131,7 @@ const getProducts = async () => {
     }
     if(favFilter) {
       temp_prod = temp_prod.filter(product => {
-        return favorites.includes(product.uuid);
+        return favorites.includes(product._id);
       });
     }
 
@@ -173,12 +175,12 @@ const renderProducts = products => {
   const template = products
     .map(product => {
       var is_fav = "";
-      if(favorites.includes(product.uuid)) {
+      if(favorites.includes(product._id)) {
         is_fav = "fav_clicked";
       }
 
       return `
-      <div class="product" id=${product.uuid}>
+      <div class="product" id=${product._id}>
         <div>
           <span>${product.brand}</span>
           <button class="fav ${is_fav}" type="button" onclick="setFav(this)"><i class="fa fa-star"></i></button>

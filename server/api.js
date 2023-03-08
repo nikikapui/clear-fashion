@@ -75,6 +75,35 @@ app.get('/products/search', async (request, response) => {
   }
 });
 
+app.get('/brands', async (request, response) => {
+  const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
+  const MONGODB_DB_NAME = 'clearfashion';
+
+  const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
+  const db =  client.db(MONGODB_DB_NAME);
+
+  const collection = db.collection('products');
+
+  let end_result = {
+    "success": "",
+    "data": {
+      "result": []
+    }
+  };
+  try {
+    const result = await collection.distinct('brand');
+
+    end_result["success"] = true;
+    end_result["data"]["result"] = result;
+    response.send(end_result);
+  }
+  catch {
+    end_result["success"] = false;
+    end_result["data"] = "Could not find brands";
+    response.send(end_result);
+  }
+});
+
 app.get('/products/:id', async (request, response) => {
   const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
   const MONGODB_DB_NAME = 'clearfashion';

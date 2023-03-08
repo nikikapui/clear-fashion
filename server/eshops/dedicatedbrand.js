@@ -23,8 +23,13 @@ const parse = data => {
       );
       const brand = "DEDICATED";
       const scrape_date = new Date().toISOString();
+      const link = "https://www.dedicatedbrand.com/" +
+        $(element)
+        .find('.productList-link')
+        .attr()
+        .href
 
-      return {brand, name, price, scrape_date};
+      return {brand, name, price, link, scrape_date};
     })
     .get();
 };
