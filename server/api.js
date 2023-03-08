@@ -9,6 +9,11 @@ const PORT = 8092;
 
 const app = express();
 
+const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
+const MONGODB_DB_NAME = 'clearfashion';
+
+const client = new MongoClient(MONGODB_URI, {'useNewUrlParser': true});
+
 module.exports = app;
 
 app.use(require('body-parser').json());
@@ -22,11 +27,8 @@ app.get('/', (request, response) => {
 });
 
 app.get('/products/search', async (request, response) => {
-  const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
-  const MONGODB_DB_NAME = 'clearfashion';
-
-  const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
-  const db =  client.db(MONGODB_DB_NAME);
+  const connection = await client.connect();
+  const db =  connection.db(MONGODB_DB_NAME);
 
   const collection = db.collection('products');
 
@@ -60,6 +62,8 @@ app.get('/products/search', async (request, response) => {
   try{
     const result = await collection.find(find).sort({price: 1}).toArray();
 
+    client.close();
+
     end_result["success"] = true;
     end_result["data"]["meta"]["count"] = result.length;
     end_result["data"]["meta"]["currentPage"] = parseInt(page);
@@ -76,11 +80,8 @@ app.get('/products/search', async (request, response) => {
 });
 
 app.get('/brands', async (request, response) => {
-  const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
-  const MONGODB_DB_NAME = 'clearfashion';
-
-  const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
-  const db =  client.db(MONGODB_DB_NAME);
+  const connection = await client.connect();
+  const db =  connection.db(MONGODB_DB_NAME);
 
   const collection = db.collection('products');
 
@@ -92,6 +93,8 @@ app.get('/brands', async (request, response) => {
   };
   try {
     const result = await collection.distinct('brand');
+
+    client.close();
 
     end_result["success"] = true;
     end_result["data"]["result"] = result;
@@ -105,16 +108,15 @@ app.get('/brands', async (request, response) => {
 });
 
 app.get('/products/:id', async (request, response) => {
-  const MONGODB_URI = 'mongodb+srv://admin:yYpKroykl1yW4Mai@clusterniki.d5csiu7.mongodb.net/?retryWrites=true&w=majority';
-  const MONGODB_DB_NAME = 'clearfashion';
-
-  const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
-  const db =  client.db(MONGODB_DB_NAME);
+  const connection = await client.connect();
+  const db =  connection.db(MONGODB_DB_NAME);
 
   const collection = db.collection('products');
 
   try {
     const result = await collection.findOne({_id: ObjectId(request.params.id) });
+    client.close();
+
     response.send(result);
   }
   catch {
