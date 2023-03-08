@@ -69,7 +69,7 @@ app.get('/products/search', async (request, response) => {
     end_result["data"]["meta"]["currentPage"] = parseInt(page);
     end_result["data"]["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
     end_result["data"]["meta"]["pageSize"] = parseInt(limit);
-    end_result["data"]["result"] = result.slice(parseInt(page) - 1, parseInt(page) - 1 + parseInt(limit));
+    end_result["data"]["result"] = result.slice((parseInt(page) - 1) * parseInt(limit), parseInt(page) * parseInt(limit));
     response.send(end_result);
   }
   catch{

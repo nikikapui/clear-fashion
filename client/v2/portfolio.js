@@ -203,6 +203,7 @@ const renderPagination = pagination => {
     (value, index) => `<option value="${index + 1}">${index + 1}</option>`
   ).join('');
 
+  console.log(pageCount)
   selectPage.innerHTML = options;
   selectPage.selectedIndex = currentPage - 1;
 };
@@ -371,8 +372,10 @@ selectBrands.addEventListener('change', async (event) => {
 
 spanPrice.addEventListener('click', async (event) => {
   let products={};
+  let price = 0;
   if (currentPrice==0) {
-    products = await fetchProducts(1, currentPagination.pageSize, currentBrand, 50);
+    price = 50;
+    products = await fetchProducts(1, currentPagination.pageSize, currentBrand, price);
     spanPrice.classList.add('checked');
   }
   else {
@@ -380,7 +383,7 @@ spanPrice.addEventListener('click', async (event) => {
     spanPrice.classList.remove('checked');
   }
   
-  setCurrentProducts(products, currentBrand, 50);
+  setCurrentProducts(products, currentBrand, price);
   render(currentProducts, currentPagination);
 });
 
