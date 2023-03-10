@@ -22,12 +22,12 @@ let currentProducts = [];
 let currentPagination = {};
 let currentBrand = "";
 let currentPrice = 0;
+let currentDate = "";
+let currentSort = "price-asc";
 let favorites = [];
 
 let temp_prod = [];
 
-let dateFilter = false;
-let sorting_method = "price-asc";
 let favFilter = false;
 
 // instantiate the selectors
@@ -52,11 +52,13 @@ const spanFav = document.querySelector('#favorites');
  * @param {Array} result - products to display
  * @param {Object} meta - pagination meta info
  */
-const setCurrentProducts = ({result, meta}, brand, price) => {
+const setCurrentProducts = ({result, meta}, brand, price, date, sort) => {
   currentProducts = result;
   currentPagination = meta;
   currentBrand = brand;
   currentPrice = price;
+  currentDate = date;
+  currentSort = sort;
 };
 
 /**
@@ -65,7 +67,7 @@ const setCurrentProducts = ({result, meta}, brand, price) => {
  * @param  {Number}  [limit=12] - size of the page
  * @return {Object}
  */
-const fetchProducts = async (page = 1, limit = 12, brand="", price=0) => {
+const fetchProducts = async (page = 1, limit = 12, brand="", price=0, date = "", sort = "price-asc") => {
   try {
     let add = ``;
     if(brand != "") {
@@ -74,8 +76,11 @@ const fetchProducts = async (page = 1, limit = 12, brand="", price=0) => {
     if(price != 0) {
       add += `&price=${price}`
     }
+    if(date != "") {
+      add += `&date=${date}`
+    }
     const response = await fetch(
-      `https://clear-fashion-nikikapui.vercel.app/products/search?page=${page}&limit=${limit}` + add
+      `https://clear-fashion-nikikapui.vercel.app/products/search?page=${page}&limit=${limit}&sort=${sort}` + add
     );
     const body = await response.json();
 
@@ -108,55 +113,6 @@ const fetchBrands = async (brand) => {
     return {currentProducts, currentPagination};
   }
 };
-
-
-const getProducts = async () => {
-  var products = {};
-  if(dateFilter || (sorting_method !="") || favFilter) {
-    const temp = currentPagination.pageSize;
-    const test = await fetchProducts(1, 1);
-    products = await fetchProducts(1, test.meta.count);
-
-    temp_prod = products.result;
-    if(dateFilter) {
-      temp_prod = temp_prod.filter(product => {
-        return new Date(product.released) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
-      });
-    }
-    if(favFilter) {
-      temp_prod = temp_prod.filter(product => {
-        return favorites.includes(product._id);
-      });
-    }
-
-    switch(sorting_method) {
-      case "price-asc":
-        temp_prod.sort((A_prod, B_prod) => (A_prod.price - B_prod.price));
-        break;
-      case "price-desc":
-        temp_prod.sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
-        break;
-      case "date-asc":
-        temp_prod.sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)));
-        break;
-      case "date-desc":
-        temp_prod.sort((A_prod, B_prod) => (new Date(A_prod.released) - new Date(B_prod.released)));
-        break;
-    }
-
-    products.meta.count =  temp_prod.length;
-    products.meta.pageSize = temp;
-    products.meta.currentPage = 1;
-    products.meta.pageCount = Math.ceil(temp_prod.length / temp);
-    products.result = temp_prod.slice(0,products.meta.pageSize);
-  }
-  else {
-    temp_prod = [];
-    products = await fetchProducts(1, currentPagination.pageSize);
-  }
-
-  return products;
-}
 
 /**
  * Render list of products
@@ -224,7 +180,7 @@ const renderIndicators = async pagination => {
   let temp_new = 0;
   let temp_p_value = [];
   let temp_last = {};
-  if(dateFilter || favFilter) {
+  if(favFilter) {
     temp_new = temp_prod.filter(product => {
       return new Date(product.released) > new Date(new Date('2022-10-12').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
     }).length;
@@ -310,17 +266,17 @@ selectShow.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(dateFilter || favFilter) {
+  if(favFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = parseInt(event.target.value);
     products.meta.pageCount = Math.ceil(temp_prod.length / parseInt(event.target.value));
     products.result = temp_prod.slice(0,products.meta.pageSize);
   }
   else {
-    products = await fetchProducts(1, parseInt(event.target.value), currentBrand, currentPrice);
+    products = await fetchProducts(1, parseInt(event.target.value), currentBrand, currentPrice, currentDate, currentSort);
   }
 
-  setCurrentProducts(products, currentBrand, currentPrice);
+  setCurrentProducts(products, currentBrand, currentPrice, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });
 
@@ -332,7 +288,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     favorites = []
   }
 
-  setCurrentProducts(products, currentBrand, currentPrice);
+  setCurrentProducts(products, currentBrand, currentPrice, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });
 
@@ -341,7 +297,7 @@ selectPage.addEventListener('change', async (event) => {
     "meta" : {},
     "result" : []
   };
-  if(dateFilter || favFilter) {
+  if(favFilter) {
     products.meta.count =  temp_prod.length;
     products.meta.pageSize = currentPagination.pageSize;
     products.meta.currentPage = parseInt(event.target.value);
@@ -349,63 +305,56 @@ selectPage.addEventListener('change', async (event) => {
     products.result = temp_prod.slice((products.meta.currentPage - 1) * products.meta.pageSize, (products.meta.currentPage * products.meta.pageSize));
   }
   else {
-    products = await fetchProducts(parseInt(event.target.value), currentPagination.pageSize, currentBrand, currentPrice);
+    products = await fetchProducts(parseInt(event.target.value), currentPagination.pageSize, currentBrand, currentPrice, currentDate, currentSort);
   }
 
-  setCurrentProducts(products, currentBrand, currentPrice);
+  setCurrentProducts(products, currentBrand, currentPrice, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });
 
 selectBrands.addEventListener('change', async (event) => {
-  let products = {};
-  if (event.target.value === "") {
-    products = await fetchProducts(1, currentPagination.pageSize);
-  }
-  else {
-    products = await fetchProducts(1, currentPagination.pageSize, event.target.value)
-  }
+  const products = await fetchProducts(1, currentPagination.pageSize, event.target.value, currentPrice, currentDate, currentSort); 
 
-  setCurrentProducts(products, event.target.value, currentPrice);
+  setCurrentProducts(products, event.target.value, currentPrice, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });
 
 spanPrice.addEventListener('click', async (event) => {
-  let products={};
   let price = 0;
   if (currentPrice==0) {
     price = 50;
-    products = await fetchProducts(1, currentPagination.pageSize, currentBrand, price);
     spanPrice.classList.add('checked');
   }
   else {
-    products = await fetchProducts(1, currentPagination.pageSize, currentBrand);
     spanPrice.classList.remove('checked');
   }
   
-  setCurrentProducts(products, currentBrand, price);
+  const products = await fetchProducts(1, currentPagination.pageSize, currentBrand, price, currentDate, currentSort);
+
+  setCurrentProducts(products, currentBrand, price, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });
 
 spanDate.addEventListener('click', async (event) => {
-  if (!dateFilter) {
-    dateFilter = true;
+  let date = "";
+  if (currentDate == "") {
+    date = new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000));
     spanDate.classList.add('checked');
   }
   else {
-    dateFilter = false;
     spanDate.classList.remove('checked');
   }
+
+  const products = await fetchProducts(1, currentPagination.pageSize, currentBrand, currentPrice, date, currentSort);
   
-  const products = await getProducts();
-  setCurrentProducts(products, currentBrand, currentPrice);
+  setCurrentProducts(products, currentBrand, currentPrice, date, currentSort);
   render(currentProducts, currentPagination);
 });
 
 selectSort.addEventListener('change', async (event) => {
-  sorting_method = event.target.value;
+  const products = await fetchProducts(1, currentPagination.pageSize, currentBrand, currentPrice, currentDate, event.target.value);
 
-  const products = await getProducts();
-  setCurrentProducts(products, event.target.value, currentPrice);
+  setCurrentProducts(products, event.target.value, currentPrice, currentDate, event.target.value);
   render(currentProducts, currentPagination);
 });
 
@@ -436,6 +385,6 @@ spanFav.addEventListener('click', async (event) => {
   }
   
   const products = await getProducts();
-  setCurrentProducts(products, currentBrand, currentPrice);
+  setCurrentProducts(products, currentBrand, currentPrice, currentDate, currentSort);
   render(currentProducts, currentPagination);
 });

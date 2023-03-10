@@ -71,10 +71,10 @@ app.get('/products/search', async (request, response) => {
       sort["price"] = -1;
       break;
     case "date-asc":
-      sort["scrape_date"] = 1;
+      sort["scrape_date"] = -1;
       break;
     case "date-desc":
-      sort["scrape_date"] = -1;
+      sort["scrape_date"] = 1;
       break;
   }
 
