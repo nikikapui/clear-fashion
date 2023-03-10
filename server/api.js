@@ -56,6 +56,7 @@ app.get('/products/search', async (request, response) => {
   }
   if(date != undefined) {
     find["scrape_date"] = {$gt: new Date(date).toISOString};
+    console.log(find)
   }
   if(sorting == undefined) {
     sorting = "price-asc"
