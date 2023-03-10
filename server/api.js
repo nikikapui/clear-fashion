@@ -96,9 +96,20 @@ app.get('/products/search', async (request, response) => {
     end_result["data"]["meta"]["currentPage"] = parseInt(page);
     end_result["data"]["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
     end_result["data"]["meta"]["pageSize"] = parseInt(limit);
+
     end_result["data"]["meta"]["newCount"] = result.filter(product => {
-      return new Date(product.scrape_date) > new Date(new Date('2023-03-22T19:10').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+      return new Date(product.scrape_date) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
     }).length;
+
+    const temp_p_value = [...result].sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
+    const p50_index = Math.floor(temp_p_value.length * 0.5);
+    end_result["data"]["meta"]["p50"] = temp_p_value[p50_index].price;;
+    const p90_index = Math.floor(temp_p_value.length * 0.9);
+    end_result["data"]["meta"]["p90"] = temp_p_value[p90_index].price;;
+    const p95_index = Math.floor(temp_p_value.length * 0.95);
+    end_result["data"]["meta"]["p95"] = temp_p_value[p95_index].price;;
+
+    end_result["data"]["meta"]["lastDate"] = [...result].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)))[0].scrape_date;
     end_result["data"]["result"] = result.slice((parseInt(page) - 1) * parseInt(limit), parseInt(page) * parseInt(limit));
     response.send(end_result);
   }
