@@ -39,6 +39,9 @@ app.get('/products/search', async (request, response) => {
   let page = request.query.page;
   let date = request.query.date;
   let sorting = request.query.sort;
+  let fav = request.query.favorites;
+
+  response.send(fav)
 
   const find = {};
 
@@ -111,7 +114,7 @@ app.get('/products/search', async (request, response) => {
 
     end_result["data"]["meta"]["lastDate"] = [...result].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)))[0].scrape_date;
     end_result["data"]["result"] = result.slice((parseInt(page) - 1) * parseInt(limit), parseInt(page) * parseInt(limit));
-    response.send(end_result);
+    //response.send(end_result);
   }
   catch{
     end_result["success"] = false;
@@ -148,7 +151,6 @@ app.get('/brands', async (request, response) => {
   }
 });
 
-//TODO response formatting
 app.get('/products/:id', async (request, response) => {
   const connection = await client.connect();
   const db =  connection.db(MONGODB_DB_NAME);
