@@ -203,7 +203,6 @@ const renderPagination = pagination => {
     (value, index) => `<option value="${index + 1}">${index + 1}</option>`
   ).join('');
 
-  console.log(pageCount)
   selectPage.innerHTML = options;
   selectPage.selectedIndex = currentPage - 1;
 };

@@ -26,6 +26,7 @@ app.get('/', (request, response) => {
   response.send({'ack': true, 'test': true});
 });
 
+
 app.get('/products/search', async (request, response) => {
   const connection = await client.connect();
   const db =  connection.db(MONGODB_DB_NAME);
@@ -36,6 +37,8 @@ app.get('/products/search', async (request, response) => {
   const brand = request.query.brand;
   const price = request.query.price;
   let page = request.query.page;
+  let date = request.query.date;
+  let sorting = request.query.sort;
 
   const find = {};
 
@@ -51,6 +54,30 @@ app.get('/products/search', async (request, response) => {
   if(price != undefined) {
     find["price"] = {$lt: parseInt(price)};
   }
+  if(date != undefined) {
+    find["scrape_date"] = {$gt: new Date(date)};
+  }
+  if(sorting == undefined) {
+    sorting = "price-asc"
+  }
+
+  const sort = {};
+
+  switch(sorting) {
+    case "price-asc":
+      sort["price"] = 1;
+      break;
+    case "price-desc":
+      sort["price"] = -1;
+      break;
+    case "date-asc":
+      sort["scrape_date"] = 1;
+      break;
+    case "date-desc":
+      sort["scrape_date"] = -1;
+      break;
+  }
+
 
   let end_result = {
     "success": "",
@@ -60,7 +87,7 @@ app.get('/products/search', async (request, response) => {
     }
   };
   try{
-    const result = await collection.find(find).sort({price: 1}).toArray();
+    const result = await collection.find(find).sort(sort).toArray();
 
     client.close();
 
@@ -107,6 +134,7 @@ app.get('/brands', async (request, response) => {
   }
 });
 
+//TODO response formatting
 app.get('/products/:id', async (request, response) => {
   const connection = await client.connect();
   const db =  connection.db(MONGODB_DB_NAME);
