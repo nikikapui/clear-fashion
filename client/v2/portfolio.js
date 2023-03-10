@@ -354,7 +354,9 @@ spanDate.addEventListener('click', async (event) => {
 selectSort.addEventListener('change', async (event) => {
   const products = await fetchProducts(1, currentPagination.pageSize, currentBrand, currentPrice, currentDate, event.target.value);
 
-  setCurrentProducts(products, event.target.value, currentPrice, currentDate, event.target.value);
+  setCurrentProducts(products, currentBrand, currentPrice, currentDate, event.target.value);
+
+  console.log(currentSort);
   render(currentProducts, currentPagination);
 });
 

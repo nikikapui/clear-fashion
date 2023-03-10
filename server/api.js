@@ -96,6 +96,9 @@ app.get('/products/search', async (request, response) => {
     end_result["data"]["meta"]["currentPage"] = parseInt(page);
     end_result["data"]["meta"]["pageCount"] = Math.ceil(result.length/parseInt(limit));
     end_result["data"]["meta"]["pageSize"] = parseInt(limit);
+    end_result["data"]["meta"]["newCount"] = result.filter(product => {
+      return new Date(product.scrape_date) > new Date(new Date('2023-03-22T19:10').getTime() - (14 * 24 * 60 * 60 * 1000)) ;
+    }).length;
     end_result["data"]["result"] = result.slice((parseInt(page) - 1) * parseInt(limit), parseInt(page) * parseInt(limit));
     response.send(end_result);
   }
