@@ -41,8 +41,6 @@ app.get('/products/search', async (request, response) => {
   let sorting = request.query.sort;
   let fav = request.query.favorites;
 
-  console.log(fav)
-
   const find = {};
 
   if(limit == undefined) {
@@ -61,7 +59,13 @@ app.get('/products/search', async (request, response) => {
     find["scrape_date"] = {$gt: new Date(date).toISOString()};
   }
   if(sorting == undefined) {
-    sorting = "price-asc"
+    sorting = "price-asc";
+  }
+  if(fav != undefined) {
+    fav = fav.split(",");
+    fav = fav.map(id => ObjectId(id))
+    
+    find["_id"] = {$in: fav};
   }
 
   const sort = {};

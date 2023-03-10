@@ -306,8 +306,6 @@ const setFav = (button) => {
   }
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
-
-  console.log(localStorage)
 }
 
 spanFav.addEventListener('click', async (event) => {
