@@ -108,33 +108,32 @@ app.get('/products/search', async (request, response) => {
       return new Date(product.scrape_date) > new Date(new Date().getTime() - (14 * 24 * 60 * 60 * 1000)) ;
     }).length;
 
-    const temp_p_value = [...result].sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
-    const p50_index = Math.floor(temp_p_value.length * 0.5);
-    end_result["data"]["meta"]["p50"] = temp_p_value[p50_index].price;
-    const p90_index = Math.floor(temp_p_value.length * 0.9);
-    end_result["data"]["meta"]["p90"] = temp_p_value[p90_index].price;
-    const p95_index = Math.floor(temp_p_value.length * 0.95);
-    end_result["data"]["meta"]["p95"] = temp_p_value[p95_index].price;
+    if(result.length != 0) {
+      const temp_p_value = [...result].sort((A_prod, B_prod) => (B_prod.price - A_prod.price));
+      const p50_index = Math.floor(temp_p_value.length * 0.5);
+      end_result["data"]["meta"]["p50"] = temp_p_value[p50_index].price;
+      const p90_index = Math.floor(temp_p_value.length * 0.9);
+      end_result["data"]["meta"]["p90"] = temp_p_value[p90_index].price;
+      const p95_index = Math.floor(temp_p_value.length * 0.95);
+      end_result["data"]["meta"]["p95"] = temp_p_value[p95_index].price;
 
-    end_result["data"]["meta"]["lastDate"] = [...result].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)))[0].scrape_date;
+      end_result["data"]["meta"]["lastDate"] = [...result].sort((A_prod, B_prod) => (new Date(B_prod.released) - new Date(A_prod.released)))[0].scrape_date;
+    }
+    else {
+      end_result["data"]["meta"]["p50"] = 0;
+      end_result["data"]["meta"]["p90"] = 0;
+      end_result["data"]["meta"]["p95"] = 0;
+      end_result["data"]["meta"]["lastDate"] = new Date();
+    }
+
     end_result["data"]["result"] = result.slice((parseInt(page) - 1) * parseInt(limit), parseInt(page) * parseInt(limit));
     response.send(end_result);
   }
-  catch{
+  catch(error){
+    console.log(error)
+
     end_result["success"] = false;
-    end_result["data"]["meta"]["count"] = 0;
-    end_result["data"]["meta"]["currentPage"] = 1;
-    end_result["data"]["meta"]["pageCount"] = 1;
-    end_result["data"]["meta"]["pageSize"] = parseInt(limit);
-
-    end_result["data"]["meta"]["newCount"] = 0;
-
-    end_result["data"]["meta"]["p50"] = 0;
-    end_result["data"]["meta"]["p90"] = 0;
-    end_result["data"]["meta"]["p95"] = 0;
-
-    end_result["data"]["meta"]["lastDate"] = new Date();
-    end_result["data"]["result"] = [];
+    end_result["data"] = "Invalid parameters";
     
     response.send(end_result);
   }
