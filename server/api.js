@@ -56,7 +56,7 @@ app.get('/products/search', async (request, response) => {
   }
   if(date != undefined) {
     find["scrape_date"] = {$gt: new Date(date).toISOString};
-    console.log(find)
+    response.send(find);
   }
   if(sorting == undefined) {
     sorting = "price-asc"
@@ -103,7 +103,7 @@ app.get('/products/search', async (request, response) => {
   catch{
     end_result["success"] = false;
     end_result["data"] = "Invalid parameters";
-    response.send(end_result);
+    //response.send(end_result);
   }
 });
 
