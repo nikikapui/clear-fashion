@@ -55,7 +55,7 @@ app.get('/products/search', async (request, response) => {
     find["price"] = {$lt: parseInt(price)};
   }
   if(date != undefined) {
-    find["scrape_date"] = {$gt: new Date(date)};
+    find["scrape_date"] = {$gt: new Date(date).toISOString};
   }
   if(sorting == undefined) {
     sorting = "price-asc"
