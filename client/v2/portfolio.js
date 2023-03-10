@@ -58,7 +58,7 @@ const setCurrentProducts = ({result, meta}, brand, price, date, sort, fav) => {
   currentPrice = price;
   currentDate = date;
   currentSort = sort;
-  currentFav = fav
+  currentFav = fav;
 };
 
 /**
@@ -71,16 +71,16 @@ const fetchProducts = async (page = 1, limit = 12, brand="", price=0, date = "",
   try {
     let add = ``;
     if(brand != "") {
-      add += `&brand=${brand}`
+      add += `&brand=${brand}`;
     }
     if(price != 0) {
-      add += `&price=${price}`
+      add += `&price=${price}`;
     }
     if(date != "") {
-      add += `&date=${date}`
+      add += `&date=${date}`;
     }
     if(fav) {
-      add += `&favorites=${favorites}`
+      add += `&favorites=${favorites}`;
     }
     const response = await fetch(
       `https://clear-fashion-nikikapui.vercel.app/products/search?page=${page}&limit=${limit}&sort=${sort}` + add
