@@ -98,6 +98,10 @@ app.get('/products/search', async (request, response) => {
 
     client.close();
 
+    if(page > Math.ceil(result.length/parseInt(limit))) {
+      page = 1;
+    }
+
     end_result["success"] = true;
     end_result["data"]["meta"]["count"] = result.length;
     end_result["data"]["meta"]["currentPage"] = parseInt(page);
